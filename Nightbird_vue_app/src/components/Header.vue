@@ -1,0 +1,110 @@
+<!-- HTML code -->
+<template>
+  <header>
+    <nav
+      class="navbar bg-transparent flex justify-between items-center py-2 px-4 min-h-[70px]"
+    >
+      <div href="#">
+        <RouterLink to="/" class="text-2xl uppercase text-white">
+          <h1 class="text-black">Nightbird</h1>
+        </RouterLink>
+      </div>
+      <!-- Nav links -->
+      <ul
+        class="navMenu flex justify-between items-center gap-8 pb-2 md:pb-0"
+        :class="[{ active: isActive }]"
+      >
+        <li class="my-3 uppercase">Home</li>
+        <li class="my-3 uppercase">Menu</li>
+        <li class="my-3 uppercase">Gallery</li>
+        <li class="my-3 p-1 uppercase border-solid border-2 border-black">
+          Reservations
+        </li>
+      </ul>
+
+      <!-- Hamburger menu -->
+      <div
+        @click="toggleHamburgerMenu()"
+        class="cursor-pointer md:hidden"
+        :class="['hamburger', { active: isActive }]"
+      >
+        <span
+          class="bg-black transition ease-in-out delay-50 bar block w-7 h-0.5 rounded my-1.5"
+        ></span>
+        <span
+          class="bg-black transition ease-in-out delay-50 bar block w-7 h-0.5 rounded my-1.5"
+        ></span>
+        <span
+          class="bg-black transition ease-in-out delay-50 bar block w-7 h-0.5 rounded my-1.5"
+        ></span>
+      </div>
+    </nav>
+  </header>
+</template>
+
+<!-- JavaScript code -->
+<script>
+import { RouterLink } from "vue-router";
+
+export default {
+  data() {
+    return {
+      isActive: false,
+    };
+  },
+  name: "Header",
+  methods: {
+    toggleHamburgerMenu() {
+      // Toggle the hamburger menu
+      this.isActive = !this.isActive;
+    },
+    onResize() {
+      // Close the hamburger menu on bigger screens
+      if (window.innerWidth < 768) {
+        this.isActive = !this.isActive;
+      } else {
+        return this.isActive;
+      }
+    },
+  },
+};
+</script>
+
+<!-- CSS styles -->
+<style scoped>
+@media screen and (min-width: 300px) and (max-width: 768px) {
+  /* Create an 'X' once the hamburger menu has been clicked */
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+  }
+
+  .navMenu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+  }
+
+  .nav-item {
+    margin: 16px 0;
+  }
+
+  .active {
+    left: 0;
+    z-index: 1;
+  }
+  .deactive {
+    left: 100;
+  }
+}
+</style>
