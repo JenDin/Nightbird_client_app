@@ -2,11 +2,11 @@
 <template>
   <header>
     <nav
-      class="navbar bg-transparent flex justify-between items-center py-2 px-4 min-h-[70px]"
+      class="navbar bg-transparent flex justify-between items-center py-2 px-4 min-h-[70px] text-white"
     >
       <div href="#">
         <RouterLink to="/" class="text-2xl uppercase text-white">
-          <h1 class="text-black">Nightbird</h1>
+          <h1 class="text-white">Ikumi</h1>
         </RouterLink>
       </div>
       <!-- Nav links -->
@@ -17,7 +17,7 @@
         <li class="my-3 uppercase">Home</li>
         <li class="my-3 uppercase">Menu</li>
         <li class="my-3 uppercase">Gallery</li>
-        <li class="my-3 p-1 uppercase border-solid border-2 border-black">
+        <li class="my-3 p-1.5 uppercase border-solid border-2 border-white">
           Reservations
         </li>
       </ul>
@@ -29,13 +29,13 @@
         :class="['hamburger', { active: isActive }]"
       >
         <span
-          class="bg-black transition ease-in-out delay-50 bar block w-7 h-0.5 rounded my-1.5"
+          class="bg-white transition ease-in-out delay-50 bar block w-7 h-0.5 rounded my-1.5"
         ></span>
         <span
-          class="bg-black transition ease-in-out delay-50 bar block w-7 h-0.5 rounded my-1.5"
+          class="bg-white transition ease-in-out delay-50 bar block w-7 h-0.5 rounded my-1.5"
         ></span>
         <span
-          class="bg-black transition ease-in-out delay-50 bar block w-7 h-0.5 rounded my-1.5"
+          class="bg-white transition ease-in-out delay-50 bar block w-7 h-0.5 rounded my-1.5"
         ></span>
       </div>
     </nav>

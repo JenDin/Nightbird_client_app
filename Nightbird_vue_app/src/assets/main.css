@@ -21,6 +21,6 @@ body {
   background: #eee;
   display: flex;
   flex-direction: column;
-  font-family: Poppins;
-  padding-bottom: 5rem;
+  font-family: "Open Sans", sans-serif;
+  /* padding-bottom: 5rem; */
 }
