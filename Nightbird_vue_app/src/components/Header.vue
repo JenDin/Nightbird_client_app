@@ -15,7 +15,7 @@
         :class="[{ active: isActive }]"
       >
         <li class="my-3 uppercase hover:text-orange-400">
-          <RouterLink to="/home">Home</RouterLink>
+          <RouterLink to="/">Home</RouterLink>
         </li>
         <li class="my-3 uppercase hover:text-orange-400">
           <RouterLink to="/menu">Menu</RouterLink>
