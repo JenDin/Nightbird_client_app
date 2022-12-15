@@ -14,11 +14,19 @@
         class="navMenu flex justify-between items-center gap-8 pb-2 md:pb-0"
         :class="[{ active: isActive }]"
       >
-        <li class="my-3 uppercase">Home</li>
-        <li class="my-3 uppercase">Menu</li>
-        <li class="my-3 uppercase">Gallery</li>
-        <li class="my-3 p-1.5 uppercase border-solid border-2 border-white">
-          Reservations
+        <li class="my-3 uppercase hover:text-orange-400">
+          <RouterLink to="/home">Home</RouterLink>
+        </li>
+        <li class="my-3 uppercase hover:text-orange-400">
+          <RouterLink to="/menu">Menu</RouterLink>
+        </li>
+        <li class="my-3 uppercase hover:text-orange-400">
+          <RouterLink to="/gallery">Gallery</RouterLink>
+        </li>
+        <li
+          class="my-3 p-1.5 uppercase border-solid border-2 border-white hover:border-orange-400"
+        >
+          <RouterLink to="/reservations">Reservations</RouterLink>
         </li>
       </ul>
 

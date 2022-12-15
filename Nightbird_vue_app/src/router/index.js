@@ -9,6 +9,18 @@ const router = createRouter({
       name: "home",
       component: HomeView,
     },
+    {
+      path: "/menu",
+      name: "menu",
+    },
+    {
+      path: "/gallery",
+      name: "gallery",
+    },
+    {
+      path: "/reservations",
+      name: "reservations",
+    },
   ],
 });
 
