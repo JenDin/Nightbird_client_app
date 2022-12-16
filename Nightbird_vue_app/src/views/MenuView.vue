@@ -1,19 +1,22 @@
 <!-- HTML code -->
 <template>
   <Header />
-  <h1 class="text-3xl text-center uppercase font-bold mt-5">Menu</h1>
-  <div class="bg-[#81a58e] p-4 mt-10">
+  <h1 class="text-4xl text-center uppercase font-bold mt-8">Menu</h1>
+  <!-- <div class="flex justify-center items-center"> -->
+  <div class="p-4 mt-10">
     <article class="flex justify-center items-center max-w-xl m-auto flex-wrap">
-      <h2 class="text-xl text-center uppercase font-bold">Ikumi's Sushi</h2>
+      <h2 class="text-2xl text-center uppercase font-bold">Our sushi</h2>
       <FoodMenu v-for="dish in dishes" :dish="dish" :key="dish.id" />
     </article>
   </div>
-  <div class="bg-[#a2c2ae] p-4">
+  <!-- <hr class="my-8 h-px bg-gray-200 border-0 dark:bg-gray-700 max-w-sm m-auto" /> -->
+  <div class="p-4">
     <article class="flex justify-center items-center max-w-xl m-auto flex-wrap">
-      <h2 class="text-xl text-center uppercase font-bold">Ikumi's drinks</h2>
+      <h2 class="text-2xl text-center uppercase font-bold">Our drinks</h2>
       <DrinkMenu v-for="drink in drinks" :drink="drink" :key="drink.id" />
     </article>
   </div>
+  <!-- </div> -->
 </template>
 
 <!-- JavaScript code -->

@@ -23,7 +23,9 @@
         <li class="my-3 uppercase hover:text-orange-400">
           <RouterLink to="/gallery">Gallery</RouterLink>
         </li>
-        <li class="my-3 p-1.5 uppercase border-solid border-2 test" id="test">
+        <li
+          class="my-3 p-1.5 uppercase border-solid border-2 hover:border-orange-400"
+        >
           <RouterLink to="/reservations">Reservations</RouterLink>
         </li>
       </ul>

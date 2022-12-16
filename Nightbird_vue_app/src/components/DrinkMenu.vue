@@ -1,6 +1,6 @@
 <!-- HTML code -->
 <template>
-  <div class="container max-w-md text-center">
+  <div class="container max-w-md text-center mb-2">
     <h3>
       <span class="font-semibold">{{ drink.title }}</span> |
       <span class="text-right">¥{{ drink.price }}</span>
