@@ -2,8 +2,7 @@
 <template>
   <header>
     <nav
-      class="navbar bg-transparent flex justify-between items-center py-2 px-4 min-h-[70px]"
-      :style="{ color: lightLinkColor }"
+      class="navbar flex justify-between items-center py-2 px-4 min-h-[70px] bg-[#131515be] text-white"
     >
       <div href="#">
         <RouterLink to="/" class="text-2xl uppercase text-white">
@@ -24,13 +23,7 @@
         <li class="my-3 uppercase hover:text-orange-400">
           <RouterLink to="/gallery">Gallery</RouterLink>
         </li>
-        <li
-          class="my-3 p-1.5 uppercase border-solid border-2 test"
-          :style="{ 'border-color': darkBorder }"
-          @mouseover="mouseOver"
-          @mouseleave="mouseLeave"
-          id="test"
-        >
+        <li class="my-3 p-1.5 uppercase border-solid border-2 test" id="test">
           <RouterLink to="/reservations">Reservations</RouterLink>
         </li>
       </ul>
@@ -67,10 +60,6 @@ export default {
     };
   },
   name: "Header",
-  props: {
-    lightLinkColor: String,
-    darkBorder: String,
-  },
   methods: {
     toggleHamburgerMenu() {
       // Toggle the hamburger menu
@@ -121,6 +110,7 @@ export default {
     width: 100%;
     text-align: center;
     transition: 0.3s;
+    background: #131515be;
   }
 
   .nav-item {
