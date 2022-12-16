@@ -1,10 +1,10 @@
 <!-- HTML code -->
 <template>
   <div class="hero-image" :style="{ backgroundImage }">
-    <Header />
-    <h1 class="p-3 absolute bottom-10 text-white">Ikumi</h1>
-    <h1 class="p-3 absolute bottom-5 text-white">267-1154, Shibasaki</h1>
-    <h1 class="p-3 absolute bottom-0 text-white">Tokyo, Japan</h1>
+    <Header lightLinkColor="white" />
+    <h2 class="p-3 pl-5 absolute bottom-10 text-white">IKUMI</h2>
+    <p class="p-3 pl-5 absolute bottom-5 text-white">267-1154, Shibasaki</p>
+    <p class="p-3 pl-5 absolute bottom-0 text-white">Tokyo, Japan</p>
   </div>
 </template>
 

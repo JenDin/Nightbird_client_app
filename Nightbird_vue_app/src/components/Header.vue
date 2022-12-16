@@ -2,7 +2,8 @@
 <template>
   <header>
     <nav
-      class="navbar bg-transparent flex justify-between items-center py-2 px-4 min-h-[70px] text-white"
+      class="navbar bg-transparent flex justify-between items-center py-2 px-4 min-h-[70px]"
+      :style="{ color: lightLinkColor }"
     >
       <div href="#">
         <RouterLink to="/" class="text-2xl uppercase text-white">
@@ -24,7 +25,11 @@
           <RouterLink to="/gallery">Gallery</RouterLink>
         </li>
         <li
-          class="my-3 p-1.5 uppercase border-solid border-2 border-white hover:border-orange-400"
+          class="my-3 p-1.5 uppercase border-solid border-2 test"
+          :style="{ 'border-color': darkBorder }"
+          @mouseover="mouseOver"
+          @mouseleave="mouseLeave"
+          id="test"
         >
           <RouterLink to="/reservations">Reservations</RouterLink>
         </li>
@@ -58,9 +63,14 @@ export default {
   data() {
     return {
       isActive: false,
+      landingPage: true,
     };
   },
   name: "Header",
+  props: {
+    lightLinkColor: String,
+    darkBorder: String,
+  },
   methods: {
     toggleHamburgerMenu() {
       // Toggle the hamburger menu
@@ -73,6 +83,16 @@ export default {
       } else {
         return this.isActive;
       }
+    },
+    mouseOver() {
+      const reservations = document.querySelector("#test");
+      reservations.style.textDecoration = "underline";
+      reservations.style.textDecorationColor = "#fb923c";
+      reservations.style.textDecorationThickness = "3px";
+    },
+    mouseLeave() {
+      const reservations = document.querySelector("#test");
+      reservations.style.textDecoration = "none";
     },
   },
 };
