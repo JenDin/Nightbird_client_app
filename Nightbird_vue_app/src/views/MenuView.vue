@@ -1,24 +1,42 @@
 <!-- HTML code -->
 <template>
   <Header />
-  <h1 class="text-4xl text-center uppercase font-bold mt-8">Menu</h1>
+  <h1 class="text-4xl text-center uppercase font-bold mt-8 mb-10">Menu</h1>
   <!-- <div class="flex justify-center items-center"> -->
-  <div class="p-4 mt-10">
-    <article class="flex justify-center items-center max-w-xl m-auto flex-wrap">
+
+  <div class="lg:flex md:w-10/12 lg:w-1/2 m-auto max-w-6xl">
+    <article class="p-4 mt-10">
       <h2 class="text-2xl text-center uppercase font-bold">Sashimi/Nigiri</h2>
-      <SashimiMenu v-for="dish in dishes" :dish="dish" :key="dish.id" />
+      <div class="flex justify-center items-center max-w-xl m-auto flex-wrap">
+        <SashimiMenu v-for="dish in dishes" :dish="dish" :key="dish.id" />
+      </div>
     </article>
-    <article class="flex justify-center items-center max-w-xl m-auto flex-wrap">
+
+    <div
+      class="max-w-[90%] m-auto lg:m-0 lg:max-w-full border-2 h-auto relative top-0 border-black"
+    ></div>
+
+    <article class="p-4 mt-10">
+      <h2 class="text-2xl text-center uppercase font-bold">Sushi rolls</h2>
+      <div class="flex justify-center items-center max-w-xl m-auto flex-wrap">
+        <SashimiMenu v-for="dish in dishes" :dish="dish" :key="dish.id" />
+      </div>
+    </article>
+
+    <!-- <article
+      class="lg:flex justify-center items-center max-w-xl m-auto flex-wrap"
+    >
       <h2 class="text-2xl text-center uppercase font-bold">Sushi rolls</h2>
       <RollsMenu v-for="dish in dishes" :dish="dish" :key="dish.id" />
-    </article>
+    </article> -->
   </div>
-
   <!-- <hr class="my-8 h-px bg-gray-200 border-0 dark:bg-gray-700 max-w-sm m-auto" /> -->
   <div class="p-4 mb-24">
-    <article class="flex justify-center items-center max-w-xl m-auto flex-wrap">
-      <h2 class="text-2xl text-center uppercase font-bold">Our drinks</h2>
-      <DrinkMenu v-for="drink in drinks" :drink="drink" :key="drink.id" />
+    <article>
+      <h2 class="text-2xl text-center uppercase font-bold">Drinks</h2>
+      <div class="flex justify-center items-center max-w-xl m-auto flex-wrap">
+        <DrinkMenu v-for="drink in drinks" :drink="drink" :key="drink.id" />
+      </div>
     </article>
   </div>
 
