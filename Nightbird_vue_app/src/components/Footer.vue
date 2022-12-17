@@ -9,10 +9,10 @@
       <p class="">Tokyo, Japan</p>
     </div>
     <div class="text-2xl">
-      <a href="https://www.facebook.com/"
+      <a :href="facebookLink" target="_blank"
         ><i class="fa-brands fa-square-facebook px-4 hover:text-[1.8rem]"></i
       ></a>
-      <a href="https://www.instagram.com/"
+      <a :href="instagramLink" target="_blank"
         ><i class="fa-brands fa-instagram hover:text-[1.8rem]"></i
       ></a>
     </div>
@@ -23,6 +23,12 @@
 <script>
 export default {
   name: "Footer",
+  data() {
+    return {
+      facebookLink: "https://www.facebook.com/",
+      instagramLink: "https://www.instagram.com/",
+    };
+  },
 };
 </script>
 
