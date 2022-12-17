@@ -5,18 +5,23 @@
   <!-- <div class="flex justify-center items-center"> -->
   <div class="p-4 mt-10">
     <article class="flex justify-center items-center max-w-xl m-auto flex-wrap">
-      <h2 class="text-2xl text-center uppercase font-bold">Our sushi</h2>
-      <FoodMenu v-for="dish in dishes" :dish="dish" :key="dish.id" />
+      <h2 class="text-2xl text-center uppercase font-bold">Sashimi/Nigiri</h2>
+      <SashimiMenu v-for="dish in dishes" :dish="dish" :key="dish.id" />
+    </article>
+    <article class="flex justify-center items-center max-w-xl m-auto flex-wrap">
+      <h2 class="text-2xl text-center uppercase font-bold">Sushi rolls</h2>
+      <RollsMenu v-for="dish in dishes" :dish="dish" :key="dish.id" />
     </article>
   </div>
 
   <!-- <hr class="my-8 h-px bg-gray-200 border-0 dark:bg-gray-700 max-w-sm m-auto" /> -->
-  <div class="p-4">
+  <div class="p-4 mb-24">
     <article class="flex justify-center items-center max-w-xl m-auto flex-wrap">
       <h2 class="text-2xl text-center uppercase font-bold">Our drinks</h2>
       <DrinkMenu v-for="drink in drinks" :drink="drink" :key="drink.id" />
     </article>
   </div>
+
   <Footer />
   <!-- </div> -->
 </template>
@@ -24,13 +29,15 @@
 <!-- JavaScript code -->
 <script>
 import Header from "../components/Header.vue";
-import FoodMenu from "../components/FoodMenu.vue";
+import SashimiMenu from "../components/SashimiMenu.vue";
+import RollsMenu from "../components/RollsMenu.vue";
 import DrinkMenu from "../components/DrinkMenu.vue";
 import Footer from "../components/Footer.vue";
 export default {
   components: {
     Header,
-    FoodMenu,
+    SashimiMenu,
+    RollsMenu,
     DrinkMenu,
     Footer,
   },
