@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
-import MenuView from "../views/MenuView.vue";
+import FoodMenuView from "../views/FoodMenuView.vue";
+import DrinkMenuView from "../views/DrinkMenuView.vue";
 import GalleryView from "../views/GalleryView.vue";
 
 const router = createRouter({
@@ -13,8 +14,13 @@ const router = createRouter({
     },
     {
       path: "/menu",
-      name: "menu",
-      component: MenuView,
+      name: "food-menu",
+      component: FoodMenuView,
+    },
+    {
+      path: "/drinkmenu",
+      name: "drink-menu",
+      component: DrinkMenuView,
     },
     {
       path: "/gallery",

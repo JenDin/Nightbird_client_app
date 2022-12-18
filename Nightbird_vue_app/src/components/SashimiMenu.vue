@@ -7,12 +7,9 @@
     <div class="flex flex-wrap justify-between">
       <p class="font-semibold">{{ dish.title }}</p>
 
-      <p>¥{{ dish.price }}</p>
+      <p class="text-sm">¥{{ dish.price }}</p>
     </div>
-    <!-- <h3>
-      <span class="font-semibold">{{ dish.title }}</span> |
-      <span class="text-right">¥{{ dish.price }}</span>
-    </h3> -->
+
     <div class="flex justify-start">
       <p class="text-sm">{{ dish.description }}</p>
     </div>
