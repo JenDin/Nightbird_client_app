@@ -1,6 +1,8 @@
 <!-- HTML code -->
 <template>
   <Header />
+  <h1 class="text-4xl text-center uppercase font-bold mt-8 mb-4">Gallery</h1>
+
   <div class="container mx-auto px-4">
     <section class="py-8 px-4">
       <div class="flex flex-wrap -mx-4">

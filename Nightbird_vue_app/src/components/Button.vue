@@ -1,6 +1,8 @@
 <!-- HTML code -->
 <template>
-  <button class="border-2 border-black p-2 hover:bg-black hover:text-white">
+  <button
+    class="p-2 uppercase font-semibold border-black border-2 bg-black text-white w-full hover:border-2 hover:border-orange-400 hover:bg-orange-400 hover:text-black"
+  >
     {{ btnText }}
   </button>
 </template>
